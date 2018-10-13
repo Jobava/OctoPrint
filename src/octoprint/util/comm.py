@@ -2048,7 +2048,7 @@ class MachineCom(object):
 							eventManager().fire(Events.PRINTER_RESET, payload=dict(idle=idle))
 
 			except:
-				self._logger.exception("Something crashed inside the serial connection loop, please report this in OctoPrint's bug tracker:")
+				self._logger.exception("Something crashed inside the serial connection loop, please report this in BitmiPrint's bug tracker:")
 
 				errorMsg = "See octoprint.log for details"
 				self._log(errorMsg)
@@ -2476,7 +2476,7 @@ class MachineCom(object):
 				self._logger.exception(error_message)
 
 				if "failed to set custom baud rate" in exception_string.lower():
-					self._log("Your installation does not support custom baudrates (e.g. 250000) for connecting to your printer. This is a problem of the pyserial library that OctoPrint depends on. Please update to a pyserial version that supports your baudrate or switch your printer's firmware to a standard baudrate (e.g. 115200). See https://github.com/foosel/OctoPrint/wiki/OctoPrint-support-for-250000-baud-rate-on-Raspbian")
+					self._log("Your installation does not support custom baudrates (e.g. 250000) for connecting to your printer. This is a problem of the pyserial library that BitmiPrint depends on. Please update to a pyserial version that supports your baudrate or switch your printer's firmware to a standard baudrate (e.g. 115200). See https://github.com/foosel/OctoPrint/wiki/OctoPrint-support-for-250000-baud-rate-on-Raspbian")
 
 				return False
 

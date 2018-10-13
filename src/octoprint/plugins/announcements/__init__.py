@@ -57,17 +57,17 @@ class AnnouncementPlugin(octoprint.plugin.AssetPlugin,
 
 	def get_settings_defaults(self):
 		settings = dict(channels=dict(_important=dict(name="Important Announcements",
-		                                              description="Important announcements about OctoPrint.",
+		                                              description="Important announcements about BitmiPrint.",
 		                                              priority=1,
 		                                              type="rss",
 		                                              url="https://octoprint.org/feeds/important.xml"),
 		                              _releases=dict(name="Release Announcements",
-		                                             description="Announcements of new releases and release candidates of OctoPrint.",
+		                                             description="Announcements of new releases and release candidates of BitmiPrint.",
 		                                             priority=2,
 		                                             type="rss",
 		                                             url="https://octoprint.org/feeds/releases.xml"),
 		                              _blog=dict(name="On the OctoBlog",
-		                                         description="Development news, community spotlights, OctoPrint On Air episodes and more from the official OctoBlog.",
+		                                         description="Development news, community spotlights, BitmiPrint On Air episodes and more from the official OctoBlog.",
 		                                         priority=2,
 		                                         type="rss",
 		                                         url="https://octoprint.org/feeds/octoblog.xml"),
@@ -77,7 +77,7 @@ class AnnouncementPlugin(octoprint.plugin.AssetPlugin,
 		                                            type="rss",
 		                                            url="https://plugins.octoprint.org/feed.xml"),
 		                              _octopi=dict(name="OctoPi News",
-		                                           description="News around OctoPi, the Raspberry Pi image including OctoPrint.",
+		                                           description="News around OctoPi, the Raspberry Pi image including BitmiPrint.",
 		                                           priority=2,
 		                                           type="rss",
 		                                           url="https://octoprint.org/feeds/octopi.xml")),
@@ -490,8 +490,8 @@ def _strip_tags(text):
 
 __plugin_name__ = "Announcement Plugin"
 __plugin_author__ = "Gina Häußge"
-__plugin_description__ = "Announcements all around OctoPrint"
+__plugin_description__ = "Announcements all around BitmiPrint"
 __plugin_disabling_discouraged__ = gettext("Without this plugin you might miss important announcements "
-                                           "regarding security or other critical issues concerning OctoPrint.")
+                                           "regarding security or other critical issues concerning BitmiPrint.")
 __plugin_license__ = "AGPLv3"
 __plugin_implementation__ = AnnouncementPlugin()

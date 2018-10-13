@@ -10,19 +10,19 @@
         <div id="settings_serial_general" class="tab-pane active">
             <fieldset>
                 <legend>{{ _('Connection') }}</legend>
-                <div class="control-group" title="{{ _('Serial port to connect to, setting this to AUTO will make OctoPrint try to automatically find the right setting') }}">
+                <div class="control-group" title="{{ _('Serial port to connect to, setting this to AUTO will make BitmiPrint try to automatically find the right setting') }}">
                     <label class="control-label" for="settings-serialPort">{{ _('Serial Port') }}</label>
                     <div class="controls">
                         <select id="settings-serialPort" data-bind="options: serial_portOptions, optionsCaption: 'AUTO', value: serial_port"></select>
                     </div>
                 </div>
-                <div class="control-group" title="{{ _('Serial baud rate to connect with, setting this to AUTO will make OctoPrint try to automatically find the right setting') }}">
+                <div class="control-group" title="{{ _('Serial baud rate to connect with, setting this to AUTO will make BitmiPrint try to automatically find the right setting') }}">
                     <label class="control-label" for="settings-baudrate">{{ _('Baudrate') }}</label>
                     <div class="controls">
                         <select id="settings-baudrate" data-bind="options: serial_baudrateOptions, optionsCaption: 'AUTO', value: serial_baudrate"></select>
                     </div>
                 </div>
-                <div class="control-group" title="{{ _('Makes OctoPrint try to connect to the printer automatically during start up') }}">
+                <div class="control-group" title="{{ _('Makes BitmiPrint try to connect to the printer automatically during start up') }}">
                     <div class="controls">
                         <label class="checkbox">
                             <input type="checkbox" data-bind="checked: serial_autoconnect" id="settings-serialAutoconnect"> {{ _('Auto-connect to printer on server start') }}
@@ -50,7 +50,7 @@
                     <div class="controls">
                         <label class="checkbox">
                             <input type="checkbox" data-bind="checked: serial_log" id="settings-serialLog"> {{ _('Log communication to <code>serial.log</code>') }} <span class="label label-important">{{ _('Warning') }}</span>
-                            <span class="help-block">{{ _('While this can negatively impact performance, a <code>serial.log</code> can be incredibly useful for debugging any issues observed in the communication between OctoPrint and your printer.') }}</span>
+                            <span class="help-block">{{ _('While this can negatively impact performance, a <code>serial.log</code> can be incredibly useful for debugging any issues observed in the communication between BitmiPrint and your printer.') }}</span>
                         </label>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                         <label class="checkbox">
                             <input type="checkbox" data-bind="checked: serial_firmwareDetection" id="settings-serialFirmwareDetection"> {{ _('Enable automatic firmware detection') }}
                             <span class="help-block">{% trans %}
-                                If enabled, OctoPrint will try to figure out your printer's firmware automatically and adjust some communication parameters based on that.
+                                If enabled, BitmiPrint will try to figure out your printer's firmware automatically and adjust some communication parameters based on that.
                                 If that doesn't work out, or you want more granular control, uncheck this and the parameters in question will become visible for you to adjust.
                             {% endtrans %}</span>
                         </label>
@@ -319,13 +319,13 @@
                     <div class="controls">
                         <label class="checkbox">
                             <input type="checkbox" data-bind="checked: serial_waitForStart" id="settings-serialWaitForStart"> {{ _('Wait for <code>start</code> on connect') }}
-                            <span class="help-block">{{ _('Try checking this if you run into connection timeouts due to your printer taking too long to respond to OctoPrint\'s handshake attempts on connect.') }}</span>
+                            <span class="help-block">{{ _('Try checking this if you run into connection timeouts due to your printer taking too long to respond to BitmiPrint\'s handshake attempts on connect.') }}</span>
                         </label>
                     </div>
                     <div class="controls">
                         <label class="checkbox">
                             <input type="checkbox" data-bind="checked: serial_blockM0M1" id="settings-serialBlockM0M1"> {{ _('Do not send <code>M0</code>/<code>M1</code> commands to the firmware, only pause') }}
-                            <span class="help-block">{{ _('Most firmware will block and wait for the user to press the button on the controller when an <code>M0</code> or <code>M1</code> is received. Due to that OctoPrint will normally not send those commands to the printer and only pause any ongoing prints. If you want OctoPrint to send those commands to your printer, uncheck this option.') }}</span>
+                            <span class="help-block">{{ _('Most firmware will block and wait for the user to press the button on the controller when an <code>M0</code> or <code>M1</code> is received. Due to that BitmiPrint will normally not send those commands to the printer and only pause any ongoing prints. If you want BitmiPrint to send those commands to your printer, uncheck this option.') }}</span>
                         </label>
                     </div>
                 </div>

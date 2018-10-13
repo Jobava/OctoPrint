@@ -502,7 +502,7 @@ $(function() {
 
         // Allow components to react to tab change
         var onTabChange = function(current, previous) {
-            log.debug("Selected OctoPrint tab changed: previous = " + previous + ", current = " + current);
+            log.debug("Selected BitmiPrint tab changed: previous = " + previous + ", current = " + current);
             OctoPrint.coreui.selectedTab = current;
             callViewModels(allViewModels, "onTabChange", [current, previous]);
         };

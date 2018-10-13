@@ -245,7 +245,7 @@ function DataUpdater(allViewModels, connectCallback, disconnectCallback) {
                 switch (payload.reason) {
                     case "firmware": {
                         title = gettext("Error reported by printer");
-                        text = _.sprintf(gettext("Your printer's firmware reported an error. Due to that OctoPrint will disconnect. Reported error: %(error)s"), payload);
+                        text = _.sprintf(gettext("Your printer's firmware reported an error. Due to that BitmiPrint will disconnect. Reported error: %(error)s"), payload);
                         break;
                     }
                     case "resend":
