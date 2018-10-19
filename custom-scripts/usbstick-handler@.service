@@ -1,0 +1,13 @@
+# copy this to
+# /lib/systemd/system/usbstick-handler@.service
+[Unit]
+Description=Mount USB sticks
+BindsTo=dev-%i.device
+After=dev-%i.device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+#ExecStart=/usr/bin/pmount --umask 000 --noatime -w --sync %I usbstick
+ExecStart=/usr/bin/automount %I
+ExecStop=/usr/bin/pumount /dev/%I

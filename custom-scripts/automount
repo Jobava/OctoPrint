@@ -1,0 +1,10 @@
+#!/bin/bash
+# Move this to /usr/bin/automount
+/bin/echo "Mounting USB Stick..."
+/usr/bin/pmount --umask 000 --noatime -w --sync $1 usbstick
+/bin/echo "USB stick should be mounted"
+/bin/echo "Sleeping for 5 seconds"
+/bin/sleep 5
+/bin/echo "Running /usr/bin/bootstrap-wifi.py"
+/usr/bin/bootstrap-wifi.py
+echo "DONE!"
